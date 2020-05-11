@@ -181,8 +181,6 @@ header {
   box-shadow: none !important;
 }
 
-#formBtn {}
-
 #formBtnItem {
   background-color: #e41d54 !important;
   color: white;
@@ -232,7 +230,7 @@ header {
 }
 
 #cards {
-  padding: 30px 0;
+  padding: 30px;
   border: none;
 }
 
