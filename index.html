@@ -1,160 +1,240 @@
 <!DOCTYPE html>
 <html lang="pt-br">
-
 <head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-
-  <!-- Bootstrap CSS -->
-  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
-    integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
-  <!-- Font Awesome 4.7.0-->
-  <link rel="stylesheet" href="./assets/css/font-awesome-4.7.0/css/font-awesome.min.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="author" content="Sérgio Miranda Leitão">
+  <meta name="description"
+    content="Página criada como parte do programa Hiring Coders, da Gama Academy, com o objetivo de medir os conhecimentos dos alunos em HTML, CSS e JavaScript">
+  <meta name="keywords"
+    content="Gama Academy, Hiring Coders, Airbnb, JavaScript, HTML, CSS, desenvolvimento-web, Sérgio Miranda Leitão">
+  <meta http-equiv="cache-control" content="no-cache" />
+  <meta http-equiv="pragma" content="no-cache" />
+  <meta name="robots" content="all">
+  <meta http-equiv="content-language" content="pt-br" />
+  <meta http-equiv="imagetoolbar" content="no" />
+  <meta http-equiv=X-UA-Compatible content="IE=edge">
+  <title>Quartos Airbnb - Hiring Coders</title>
   <!-- Favicon -->
   <link rel="icon" href="./assets/img/favicon.ico" type="ico">
+  <!-- Bootstrap CSS -->
+  <link rel="stylesheet" href="./assets/css/bootstrap4.min.css">
+  <!-- Font Awesome 4.7.0-->
+  <link rel="stylesheet" href="./assets/css/font-awesome-4.7.0/css/font-awesome.min.css">
   <!-- CSS local -->
   <link rel="stylesheet" href="./assets/css/style.css">
-
-  <title>Quartos Airbnb - Hiring Coders</title>
 </head>
-
 <body>
-  <!-- Aviso Corona Vírus -->
-  <div class="container-fluid alert-secondary text-center" role="alert">
-    <p class="alertCOVID">Confira notícias sobre o COVID-19 através do nosso portal.
-      <a target="_blank" href="https://seralterego-desafiocovid.netlify.app/">Saiba mais</a></p>
-  </div>
-  <!-- Header -->
-  <header class="container">
-    <nav class="navbar navbar-expand-lg navbar-light sticky-top">
-      <!-- Logo -->
-      <a class="navbar-brand" href="index.html">
-        <img src="./assets/img/logo.png" width="100" height="30" class="d-inline-block align-top" alt="Logo Airbnb">
-      </a>
-      <!-- Navbar Toggler -->
-      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
-        aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-        <span class="navbar-toggler-icon"></span>
-      </button>
-      <!-- Navbar -->
-      <div class="collapse navbar-collapse justify-content-end" id="navbarSupportedContent">
-        <ul class="navbar-nav">
-          <li class="nav-item dropdown" id="navLinks">
-            <a class="nav-link dropdown-toggle mr-3" href="#" id="navbarDropdown" role="button" data-toggle="dropdown"
-              aria-haspopup="true" aria-expanded="false">
-              <i class="fa fa-globe" aria-hidden="true"></i>
-            </a>
-            <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-              <a id="navLinkItem" class="dropdown-item" href="#"><i class="fa fa-globe"
-                  aria-hidden="true"></i>&nbsp;Português (BR)</a>
-              <a id="navLinkItem" class="dropdown-item" href="#"><b>R</b><i class="fa fa-usd"
-                  aria-hidden="true"></i>&nbsp;BRL</a>
-            </div>
-          </li>
-          <li class="nav-item mr-3" id="navLinks">
-            <a class="nav-link" href="#">Hospede em sua acomodação</a>
-          </li>
-          <li class="nav-item mr-3" id="navLinks">
-            <a class="nav-link" href="#">Hospede uma experiência</a>
-          </li>
-          <li class="nav-item mr-3" id="navLinks">
-            <a class="nav-link" href="#">Ajuda</a>
-          </li>
-          <li class="nav-item mr-3" id="navLinks">
-            <a class="nav-link" href="#">Entrar</a>
-          </li>
-          <button id="navBtn" class="btn my-2 my-sm-0" type="submit">Cadastrar-se</button>
-        </ul>
-      </div>
-    </nav>
-  </header>
-  <!-- Experience Nav -->
-  <section class="container" id="expNav">
-    <ul id="fieldSets">
-      <li class="expNavItem">
-        <a id="expNavLink" class="expNavItem-active" href="#">Lugares para ficar</a>
-      </li>
-      <li class="expNavItem">
-        <a id="expNavLink" href="#">Estadias longas</a>
-      </li>
-      <li class="expNavItem">
-        <a id="expNavLink" href="#">Experiências</a>
-      </li>
-      <li class="expNavItem">
-        <a id="expNavLink" href="#">Experiências Online</a>&nbsp;<span class="badge expBdg">Novo</span>
-      </li>
-    </ul>
-    <form id="formSets">
-      <div class="form-row" id="formExp">
-        <div class="form-group col-md-3" id="formItem">
-          <label for="inputLocalizacao">Localização</label>
-          <input type="local" class="form-control" id="inputLocalizacao" placeholder="Para onde você vai?">
-        </div>
-        <div class="form-group col-md-3" id="formItem">
-          <label for="inputDate">Check-in/Checkout</label>
-          <input type="text" class="form-control" id="inputDate" placeholder="Insira as datas"
-            onfocus="(this.type='date')" onblur="(this.type='text')">
-        </div>
-        <div class="form-group col-md-3" id="formItem">
-          <label for="inputHospedes">Hóspedes</label>
-          <input type="number" class="form-control" id="inputHospedes" placeholder="Insira o número de hóspedes">
-        </div>
-        <div class="form-group col-md-3" id="formBtn">
-          <button type="submit" class="btn" id="formBtnItem"><i class="fa fa-search"
-              aria-hidden="true"></i>&nbsp;Buscar</button>
-        </div>
-      </div>
-    </form>
-  </section>
-  
-  <!-- Filtro Quartos -->
-  <section class="container filterNav">
-    <div class="row">
-      <div class="col-12">
-        <p>Mais de 300 acomodações · 10 de mai. - 20 de jun. · 1 hóspede</p>
-        <h1>Acomodações em Itapevi</h1>
-      </div>
+  <div>
+    <!-- Aviso Corona Vírus -->
+    <div class="container-fluid alert-secondary text-center" role="alert">
+      <p class="alertCOVID">Confira notícias sobre o COVID-19 através do nosso portal.
+        <a target="_blank" href="https://seralterego-desafiocovid.netlify.app/">Saiba mais</a></p>
     </div>
-    <div class="row justify-content-between" id="filterBtn">
-      <div class="d-flex-inline">
-        <button type="button" class="btn btn-outline-secondary" id="btnFilter">Flexibilidade de cancelamento</button>
-        <button type="button" class="btn btn-outline-secondary" id="btnFilter">Tipo de lugar</button>
-        <button type="button" class="btn btn-outline-secondary" id="btnFilter">Preço</button>
-        <button type="button" class="btn btn-outline-secondary" id="btnFilter">Reserva instantânea</button>
-        <button type="button" class="btn btn-outline-secondary" id="btnFilter">Mais filtros</button>
-      </div>
-      <div>
-        <button type="button" class="btn loat-right" id="btnMap">
-          <i class="fa fa-map-o" aria-hidden="true"></i>&nbsp;Exibir Mapas
+    <!-- Header -->
+    <header class="container">
+      <nav class="navbar navbar-expand-lg navbar-light sticky-top">
+        <!-- Logo -->
+        <a class="navbar-brand" href="index.html">
+          <img src="./assets/img/logo.png" width="100" height="30" class="d-inline-block align-top" alt="Logo Airbnb">
+        </a>
+        <!-- Navbar Toggler -->
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+          aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
         </button>
+        <!-- Navbar -->
+        <div class="collapse navbar-collapse justify-content-end" id="navbarSupportedContent">
+          <ul class="navbar-nav">
+            <li class="nav-item dropdown" id="navLinks">
+              <a class="nav-link dropdown-toggle mr-3" href="#" id="navbarDropdown" role="button" data-toggle="dropdown"
+                aria-haspopup="true" aria-expanded="false">
+                <i class="fa fa-globe" aria-hidden="true"></i>
+              </a>
+              <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                <a id="navLinkItem" class="dropdown-item" href="#"><i class="fa fa-globe"
+                    aria-hidden="true"></i>&nbsp;Português (BR)</a>
+                <a id="navLinkItem" class="dropdown-item" href="#"><b>R</b><i class="fa fa-usd"
+                    aria-hidden="true"></i>&nbsp;BRL</a>
+              </div>
+            </li>
+            <li class="nav-item mr-3" id="navLinks">
+              <a class="nav-link" href="#">Hospede em sua acomodação</a>
+            </li>
+            <li class="nav-item mr-3" id="navLinks">
+              <a class="nav-link" href="#">Hospede uma experiência</a>
+            </li>
+            <li class="nav-item mr-3" id="navLinks">
+              <a class="nav-link" href="#">Ajuda</a>
+            </li>
+            <li class="nav-item mr-3" id="navLinks">
+              <a class="nav-link" href="#">Entrar</a>
+            </li>
+            <button id="navBtn" class="btn my-2 my-sm-0" type="submit">Cadastrar-se</button>
+          </ul>
+        </div>
+      </nav>
+    </header>
+    <!-- Experience Nav -->
+    <section class="container" id="expNav">
+      <ul id="fieldSets">
+        <li class="expNavItem">
+          <a id="expNavLink" class="expNavItem-active" href="#">Lugares para ficar</a>
+        </li>
+        <li class="expNavItem">
+          <a id="expNavLink" href="#">Estadias longas</a>
+        </li>
+        <li class="expNavItem">
+          <a id="expNavLink" href="#">Experiências</a>
+        </li>
+        <li class="expNavItem">
+          <a id="expNavLink" href="#">Experiências Online</a>&nbsp;<span class="badge expBdg">Novo</span>
+        </li>
+      </ul>
+      <form id="formSets">
+        <div class="form-row" id="formExp">
+          <div class="form-group col-md-3" id="formItem">
+            <label for="inputLocalizacao">Localização</label>
+            <input type="local" class="form-control" id="inputLocalizacao" placeholder="Para onde você vai?">
+          </div>
+          <div class="form-group col-md-3" id="formItem">
+            <label for="inputDate">Check-in/Checkout</label>
+            <input type="text" class="form-control" id="inputDate" placeholder="Insira as datas"
+              onfocus="(this.type='date')" onblur="(this.type='text')">
+          </div>
+          <div class="form-group col-md-3" id="formItem">
+            <label for="inputHospedes">Hóspedes</label>
+            <input type="number" class="form-control" id="inputHospedes" placeholder="Insira o número de hóspedes">
+          </div>
+          <div class="form-group col-md-3" id="formBtn">
+            <button type="submit" class="btn" id="formBtnItem"><i class="fa fa-search"
+                aria-hidden="true"></i>&nbsp;Buscar</button>
+          </div>
+        </div>
+      </form>
+    </section>
+    <!-- Filtro Quartos -->
+    <section class="container filterNav">
+      <div class="row">
+        <div class="col-12">
+          <p>Mais de 300 acomodações · 10 de mai. - 20 de jun. · 1 hóspede</p>
+          <h1>Acomodações em Itapevi</h1>
+        </div>
+      </div>
+      <div class="row justify-content-between" id="filterBtn">
+        <div class="d-flex-inline">
+          <button type="button" class="btn btn-outline-secondary" id="btnFilter">Flexibilidade de cancelamento</button>
+          <button type="button" class="btn btn-outline-secondary" id="btnFilter">Tipo de lugar</button>
+          <button type="button" class="btn btn-outline-secondary" id="btnFilter">Preço</button>
+          <button type="button" class="btn btn-outline-secondary" id="btnFilter">Reserva instantânea</button>
+          <button type="button" class="btn btn-outline-secondary" id="btnFilter">Mais filtros</button>
+        </div>
+        <div>
+          <button type="button" class="btn loat-right" id="btnMap" onclick="controlMap()">
+            <i class="fa fa-map-o" aria-hidden="true"></i>&nbsp;Exibir Mapas
+          </button>
+        </div>
+      </div>
+    </section>
+    <!-- Quartos Airbnb -->
+    <!-- v1 -->
+    <section class="container d-flex align-content-start flex-wrap" id="cards">
+      <div class="row" id="cardsItem"></div>
+    </section>
+
+    <!-- v2 resultado da Live -->
+    <!-- Quartos -->
+    <div class="card-wrapper">
+      <div class="card-container"></div>
+    </div>
+    <!-- Paginação -->
+    <div class="pagination-wrapper">
+      <div class="pagination"></div>
+    </div>
+    
+  </div>
+  <!-- Mapa -->
+  <div class="row" id="map" style="display: none;"></div>
+
+  <!-- Footer -->
+  <!-- <footer>
+    <div class="container footer-links">
+      <div class="row">
+        <div class="col-xs-12 col-md-3 col-lg-3">
+                <h3 class="title uppercase inst">SOBRE</h3>
+                <ul class="lista">
+                  <li><a href="#">Airbnb Citizen</a></li>
+                  <li><a href="#">Acessibilidade</a></li>
+                  <li><a href="#">Confiança e segurança</a></li>
+                  <li><a href="#">Newsroom</a></li>
+                </ul>
+        </div>
+        <div class=" col-xs-12 col-md-3 col-lg-3">
+          <h3 class="title uppercase inst">COMUNIDADE</h3>
+          <ul class="lista">
+            <li><a href="#">Airbnb Magazine</a></li>
+            <li><a href="#">Airbnb for Work</a></li>
+            <li><a href="#">Convide amigos</a></li>
+            <li><a href="#">Carreiras</a></li>
+          </ul>
+        </div>
+        <div class=" col-xs-12 col-md-3 col-lg-3">
+          <h3 class="title uppercase inst">ANFITRIÃO</h3>
+          <ul class="lista">
+            <li><a href="#">Open Homes</a></li>
+            <li><a href="#">Olimpíadas</a></li>
+            <li><a href="#">Central de Recursos</a></li>
+            <li><a href="#">Ofereça uma experiência</a></li>
+          </ul>
+        </div>
+        <div class="col-xs-12 col-md-3 col-lg-3">
+        <h3 class="title uppercase inst">ATENDIMENTO</h3>
+          <ul class="lista">
+            <li><a href="#">Central de Ajuda</a></li>
+            <li><a href="#">Atendimento ao Bairro</a></li>
+          </ul>
+        </div>
       </div>
     </div>
+    <hr>
+    <div class="container">
+      <div class="row">
+        <div class="col-md-12 col-xs-4 footer2">
+          <p>© 2020 Airbnb, Inc. All rights reserved</p>
+          <div class="rodape">
+            <div class="git redes">
+              <a href="https://github.com/NathanCastro" target="_blank" alt="github">
+                <img src="img/github-brands.svg">
+              </a>  
+            </div>
+            <div class="link redes">
+              <a href="https://www.linkedin.com/in/nathan-castro-51a65aaa/" target="_blank" alt="linkedin">
+                <img src="img/linkedin-brands.svg" alt="linkedin">
+              </a>   
+            </div>
+            <div class="insta redes">
+              <a href="https://www.instagram.com/nathanzinhuu/?hl=pt-br" target="_blank" alt="instagram">
+                <img src="img/instagram-brands.svg" alt="instagram">
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
     </div>
-  </section>
-
-  <!-- Quartos Airbnb -->
-  <section class="container d-flex align-content-start flex-wrap" id="cards">
-    <div class="row" id="cardsItem">
-    </div>
-  </section>
-
-  <!-- <section id="preFooter"></section> -->
-
-  <!-- <footer></footer> -->
-
-  <!-- Optional JavaScript -->
-  <!-- jQuery first, then Popper.js, then Bootstrap JS -->
-  <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
-    integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous">
-    </script>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"
-    integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous">
-    </script>
-  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"
-    integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous">
-    </script>
-  <!-- JS local -->
-  <script src="./assets/js/script.js"></script>
+  </footer> -->
 </body>
+<!-- Google Maps API -->
+<!-- <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCmMEYHsu0QultPWZXKw2KDbETbZBN5sU8&callback=initMap"></script> -->
+<script async defer
+  src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDIvcx5cy5PABB0o2AqygXFbYCLQUmmFeM&callback=initMap"></script>
+<!-- Optional JavaScript -->
+<!-- jQuery first, then Popper.js, then Bootstrap JS -->
+<script src="./assets/js/jquery-3.2.1.slim.min.js"></script>
+<script src="./assets/js/popper.min.js"></script>
+<script src="./assets/js/bootstrap.min.js"></script>
+<!-- JS local -->
+<script src="./assets/js/script.js"></script>
+<!-- JS da Live -->
+<script src="./assets/js/scriptDaLive.js"></script>
 
 </html>

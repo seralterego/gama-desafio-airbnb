@@ -1,14 +1,14 @@
-const apiUrl = "https://api.sheety.co/30b6e400-9023-4a15-8e6c-16aa4e3b1e72"; //url da API
+/* const apiUrl = "https://api.sheety.co/30b6e400-9023-4a15-8e6c-16aa4e3b1e72"; //url da API
 const cardsContainer = document.querySelector('#cardsItem'); //query selector busca a div pelo ID
 let data = []; //array de dados
 
-/* fetch que irá buscar os dados da API */
+// fetch que irá buscar os dados da API
 async function fetchCards() {
   return await fetch(apiUrl)
     .then(async (r) => await r.json())
 }
 
-/* essa função pega e renderiza os cartões */
+// essa função pega e renderiza os cartões
 function renderCards(cards) {
   cardsContainer.innerHTML = "";
   cards.map(renderCard);
@@ -19,11 +19,11 @@ function renderCards(cards) {
   //}, 1000)
 }
 
-/* renderiza cada cartão */
+// renderiza cada cartão
 function renderCard(card) {
   const div = document.createElement("div");
-  /* div.style.width = "20rem"; */
-  /* div.style.margin = "2rem"; */
+  // div.style.width = "20rem";
+  // div.style.margin = "2rem";
   div.className = "card";
   div.id = "cardsItens";
   div.innerHTML = `
@@ -54,7 +54,7 @@ function renderCard(card) {
   cardsContainer.appendChild(div);
 }
 
-/* pega a resposta do array data e aguarda a resposta de fetchCards */
+// pega a resposta do array data e aguarda a resposta de fetchCards
 async function main() {
   data = await fetchCards();
   if (data[0]) {
@@ -62,14 +62,23 @@ async function main() {
   }
 }
 
-main();
+main(); */
 
 // ===============================================================
 
-/* números aleatórios para as avaliações e quartos */
+// números aleatórios para as avaliações e quartos
 function randomNumber(){
   var random = Math.floor(Math.random() * 10) + 1;
   return random;
 }
-
 randomNumber();
+
+// mostra/esconde mapa
+function controlMap() {
+  var map = document.getElementById("map");
+  if (map.style.display === "none") {
+    map.style.display = "block";
+  } else {
+    map.style.display = "none";
+  }
+}
