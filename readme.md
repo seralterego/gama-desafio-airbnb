@@ -42,5 +42,5 @@ Repositório para o Desafio Quartos do Airbnb da Gama Academy
 - **Link Github**
 <https://github.com/seralterego/gama-desafio-airbnb> (você está nele!)
 
-- **Link da Página**
-<https://seralterego-desafioairbnb.netlify.app/>
+- **Link da Página (dessa branch)**
+<https://seralterego-desafioairbnb-live.netlify.app/>
